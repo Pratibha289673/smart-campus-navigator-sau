@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Smart Campus Navigator</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f4f6f9;--card:#fff;--tx:#111827;--mut:#6b7280;--bd:#d1d5db;--navy:#1f4e79;--in:#f3f4f6;--ok:#e6f4ea;--okt:#1e7a34;--bad:#fde8e8;--badt:#b42318;--hl:#e6f4ea}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f172a;--card:#1e293b;--tx:#e5e7eb;--mut:#9ca3af;--bd:#334155;--navy:#2f6ba3;--in:#0f172a;--ok:#14351f;--okt:#6ee7a0;--bad:#3b1a1a;--badt:#fca5a5;--hl:#14351f}}
+:root[data-theme="dark"]{--bg:#0f172a;--card:#1e293b;--tx:#e5e7eb;--mut:#9ca3af;--bd:#334155;--navy:#2f6ba3;--in:#0f172a;--ok:#14351f;--okt:#6ee7a0;--bad:#3b1a1a;--badt:#fca5a5;--hl:#14351f}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.45 Arial,Helvetica,sans-serif}
+.bar{background:var(--navy);color:#fff;text-align:center;font-weight:bold;padding:12px;position:relative}
+.bar a{position:absolute;left:12px;top:12px;color:#fff;text-decoration:none;font-weight:normal}
+.wrap{max-width:1250px;margin:auto;padding:12px}
+.grid{display:grid;grid-template-columns:minmax(280px,370px) 1fr;gap:12px;align-items:start}
+@media(max-width:820px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px;min-width:0}
+h2{color:var(--navy);text-align:center;margin:18px 0 4px}h3{color:var(--navy);margin:0 0 6px}
+label{display:block;margin-top:9px;color:var(--mut);font-size:13px}
+input,select{width:100%;padding:8px;border:1px solid var(--bd);border-radius:6px;background:var(--in);color:var(--tx);font-size:14px}
+button{padding:8px 12px;border:0;border-radius:6px;background:var(--navy);color:#fff;font-size:14px;cursor:pointer}
+button.pri{width:100%;margin-top:12px;padding:11px;border-radius:20px}
+button.d{background:#b42318}button.g{background:#1e7a34}button.l{background:#64748b}
+.row{display:flex;gap:8px;margin-top:6px}.row>*{flex:1}
+.home{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.home .card{width:290px;text-align:center;padding:24px}
+.ic{width:56px;height:56px;border-radius:50%;background:var(--in);color:var(--navy);font-size:28px;line-height:56px;margin:0 auto 10px}
+.bx{padding:10px;border-radius:6px;margin:6px 0;font-weight:bold}.ok{background:var(--ok);color:var(--okt)}.bad{background:var(--bad);color:var(--badt);font-weight:normal}
+.cl{background:var(--bad);color:var(--badt);border:1px solid var(--badt);border-radius:6px;padding:8px;font-size:12px;min-height:44px}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;margin:4px 0}
+th{background:var(--navy);color:#fff;text-align:left}th,td{padding:5px 9px;font-size:13px}tr.hl{background:var(--hl);font-weight:bold}
+.mut{color:var(--mut);font-size:12px}.chips span{display:inline-block;background:var(--in);border:1px solid var(--bd);border-radius:14px;padding:3px 10px;margin:4px 4px 0 0;cursor:pointer}
+.lst{border:1px solid var(--bd);border-radius:6px;padding:8px;font-size:12px}
+svg{width:100%;height:auto;max-height:82vh;background:#fff;border-radius:8px;margin-top:8px}
+</style></head><body>
+<div class="bar"><a href="#home" id="back">← Home</a><span id="ttl">Smart Campus Navigator</span></div>
+<div class="wrap" id="app"></div><datalist id="nl"></datalist>
+<script>
+const D={"speed":84.0,"n":{"SG2":["entrance",127.5,264.1,"SAU Gate 2"],"SG1":["entrance",438.4,0.0,"SAU Gate 1"],"AB1G1":["gate",104.5,315.5,"Academic Block 1"],"AB1G2":["gate",158.4,348.8,"Academic Block 1"],"AB2G1":["gate",49.7,361.2,"Academic Block 2"],"AB2G2":["gate",75.8,415.7,"Academic Block 2"],"AB3G1":["gate",0.0,461.1,"Academic Block 3"],"AB3G2":["gate",70.4,430.5,"Academic Block 3"],"AB4G1":["gate",4.6,505.9,"Academic Block 4"],"AB4G2":["gate",85.7,542.2,"Academic Block 4"],"AB5G1":["gate",50.1,619.9,"Academic Block 5"],"AB5G2":["gate",94.1,557.2,"Academic Block 5"],"AB5G3":["gate",106.5,606.8,"Academic Block 5"],"UB":["building",58.7,675.6,"Utility Building"],"AT":["building",145.1,470.3,"Amphitheatre"],"CCG1":["gate",108.5,519.0,"Convention Centre"],"CCG2":["gate",154.5,600.1,"Convention Centre"],"CCG3":["gate",157.9,529.1,"Convention Centre"],"AB6G1":["gate",191.8,441.6,"Academic Block 6"],"AB6G2":["gate",147.0,405.8,"Academic Block 6"],"AB7G1":["gate",261.3,387.0,"Academic Block 7"],"AB7G2":["gate",228.2,338.5,"Academic Block 7"],"AB8G1":["building",356.5,380.4,"Academic Block 8"],"LIB":["building",382.9,360.4,"Library"],"ADMING1":["gate",307.5,355.3,"Admin Block"],"ADMING2":["gate",308.0,316.4,"Admin Block"],"FRB":["building",461.3,315.8,"Faculty Residential Building"],"GH":["building",546.8,222.2,"Guest House"],"HBB":["building",459.7,183.4,"Hostel Block B"],"HBA":["building",423.9,97.3,"Hostel Block A"],"BC":["building",399.7,131.9,"Basketball Court"],"VC":["building",320.0,263.7,"Volleyball Court"],"PGG1":["gate",433.9,193.9,"Playground"],"PGG2":["gate",400.9,271.8,"Playground"],"PGG3":["gate",359.0,206.8,"Playground"],"J1":["junction",139.3,281.0,""],"J2":["junction",203.0,340.7,""],"J3":["junction",123.0,634.6,""],"J4":["junction",331.2,338.2,""],"J5":["junction",474.8,227.2,""],"J6":["junction",419.1,153.2,""],"J7":["junction",21.7,382.7,""],"J8":["junction",29.7,571.4,""],"J9":["junction",285.0,285.7,""],"IC_AB1_AB2":["internal",119.0,381.7,""],"IC_AB3_AB4":["internal",53.9,478.6,""],"IC_AB6_AB7":["internal",194.5,373.2,""]},"e":[["AB1G1","AB2G1",86.9,"p"],["AB1G1","IC_AB1_AB2",67.8,"i"],["AB1G1","J1",53.3,"p"],["AB1G2","IC_AB1_AB2",51.3,"i"],["AB1G2","J2",60.6,"p"],["AB2G1","IC_AB1_AB2",72.4,"i"],["AB2G1","J7",44.4,"p"],["AB2G2","AB3G2",15.8,"p"],["AB2G2","AT",123.6,"p"],["AB2G2","IC_AB1_AB2",55.0,"i"],["AB2G2","J7",67.0,"p"],["AB3G1","AB4G1",71.0,"p"],["AB3G1","IC_AB3_AB4",56.7,"i"],["AB3G1","J7",104.5,"p"],["AB3G2","AT",118.9,"p"],["AB3G2","IC_AB3_AB4",50.9,"i"],["AB3G2","J7",68.2,"p"],["AB4G1","IC_AB3_AB4",56.4,"i"],["AB4G1","J8",78.9,"p"],["AB4G2","AB5G2",18.9,"p"],["AB4G2","AT",147.2,"p"],["AB4G2","CCG1",35.7,"p"],["AB4G2","IC_AB3_AB4",71.2,"i"],["AB4G2","J8",63.2,"p"],["AB5G1","J8",66.3,"p"],["AB5G1","UB",73.6,"p"],["AB5G2","AT",165.1,"p"],["AB5G2","CCG1",41.0,"p"],["AB5G2","J8",66.0,"p"],["AB5G3","J3",32.4,"p"],["AB6G1","AB6G2",107.2,"p"],["AB6G1","AB7G1",108.3,"p"],["AB6G1","CCG1",137.3,"p"],["AB6G1","CCG3",110.1,"p"],["AB6G1","IC_AB6_AB7",68.5,"i"],["AB6G2","AT",142.3,"p"],["AB6G2","IC_AB6_AB7",57.6,"i"],["AB6G2","J2",111.0,"p"],["AB7G1","ADMING1",68.1,"p"],["AB7G1","IC_AB6_AB7",68.3,"i"],["AB7G2","IC_AB6_AB7",48.4,"i"],["AB7G2","J2",44.8,"p"],["AB7G2","J9",87.9,"p"],["AB8G1","J4",59.3,"p"],["AB8G1","LIB",33.2,"p"],["ADMING1","J4",39.5,"p"],["ADMING2","J4",37.3,"p"],["ADMING2","J9",38.4,"p"],["BC","HBA",50.3,"p"],["BC","J6",30.4,"p"],["CCG1","CCG3",99.5,"p"],["CCG2","CCG3",91.1,"p"],["CCG2","J3",57.3,"p"],["FRB","J5",149.2,"p"],["FRB","PGG2",83.8,"p"],["GH","J5",120.0,"p"],["HBA","J6",80.7,"p"],["HBA","SG1",177.1,"p"],["HBB","J5",62.4,"p"],["HBB","J6",59.8,"p"],["J1","J2",99.9,"p"],["J1","SG2",20.7,"p"],["J3","UB",76.3,"p"],["J4","LIB",74.4,"p"],["J4","PGG2",115.1,"p"],["J5","PGG1",61.8,"p"],["J6","PGG1",52.9,"p"],["J6","PGG3",85.0,"p"],["J9","VC",49.6,"p"],["PGG3","VC",91.9,"p"]]};
+const N=D.n,SP=D.speed,E=D.e.map(([u,v,c,k])=>({u,v,c,k,x:false})),ids=Object.keys(N).sort();
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+$("#nl").innerHTML=ids.map(i=>`<option value="${i}" label="${N[i][0]}${N[i][3]?" · "+esc(N[i][3]):""}">`).join("");
+const rs=t=>{const k=(t||"").trim().split(/[\s—]+/)[0].toUpperCase();return ids.find(i=>i.toUpperCase()===k)||null};
+const sug=t=>{const u=(t||"").trim().toUpperCase();return u?ids.filter(i=>i.includes(u)).slice(0,6):[]};
+const badN=(t,r)=>`${r} ‘${esc(t)}’ is not a node of the campus graph.`+(sug(t).length?" Did you mean: "+sug(t).join(", ")+"?":"");
+const err=m=>`<div class="bx bad">${m}</div>`,out=h=>{$("#out").innerHTML=h};
+function adj(){const A={};ids.forEach(i=>A[i]=[]);E.forEach(e=>{if(!e.x){A[e.u].push([e.v,e.c]);A[e.v].push([e.u,e.c])}});ids.forEach(i=>A[i].sort((a,b)=>a[0]<b[0]?-1:1));return A}
+const h=(a,b)=>Math.hypot(N[a][1]-N[b][1],N[a][2]-N[b][2]);
+const pc=(A,p)=>{let t=0;for(let i=0;i<p.length-1;i++)t+=A[p[i]].find(x=>x[0]===p[i+1])[1];return Math.round(t*10)/10};
+/* ---- BFS / DFS / UCS / A* (nodes expanded = nodes taken from frontier, goal included) ---- */
+function search(nm,A,s,g){const order=[],ex=new Set(),inF=new Set([s]);let fr=[[s,[s],0]];
+ const f=x=>nm==="UCS"?x[2]:x[2]+h(x[0],g);
+ const pop=()=>{if(nm==="BFS")return fr.shift();if(nm==="DFS")return fr.pop();let b=0;fr.forEach((x,i)=>{const d=f(x)-f(fr[b]);if(d<-1e-9||(Math.abs(d)<1e-9&&nm==="A*"&&h(x[0],g)<h(fr[b][0],g)))b=i});return fr.splice(b,1)[0]};
+ while(fr.length){const [n,p,c]=pop();if(ex.has(n))continue;ex.add(n);order.push(n);
+  if(n===g)return{name:nm,path:p,cost:pc(A,p),exp:order.length};
+  let nb=nm==="DFS"?[...A[n]].reverse():A[n];
+  nb.forEach(([m,w])=>{if(!ex.has(m)&&(nm!=="BFS"||!inF.has(m))){inF.add(m);fr.push([m,[...p,m],c+w])}})}
+ return{name:nm,path:[],cost:null,exp:order.length}}
+/* ---- multi-stop CSP ---- */
+function table(A,ns){const T={};ns.forEach(a=>T[a]={});for(let i=0;i<ns.length;i++)for(let j=i+1;j<ns.length;j++){const r=search("A*",A,ns[i],ns[j]);if(!r.path.length)return{bad:[ns[i],ns[j]]};T[ns[i]][ns[j]]={m:r.cost,p:r.path};T[ns[j]][ns[i]]={m:r.cost,p:[...r.path].reverse()}}return{T}}
+const tot=(T,s,o)=>{let t=0,l=s;o.forEach(x=>{t+=T[l][x].m/SP;l=x});return t};
+function backtrack(T,s,S,dl){const n=S.length,valid=[],st={v:0,p:0};
+ (function rec(o,used,last,t){st.v++;if(o.length===n){valid.push([[...o],t]);return}
+  for(const x of S){if(used.has(x))continue;const t2=t+T[last][x].m/SP;if(t2>dl+1e-9){st.p++;continue}
+   o.push(x);used.add(x);rec(o,used,x,t2);o.pop();used.delete(x)}})([],new Set(),s,0);
+ valid.sort((a,b)=>a[1]-b[1]);return{valid,st}}
+const perms=a=>a.length<2?[a]:a.flatMap((x,i)=>perms([...a.slice(0,i),...a.slice(i+1)]).map(p=>[x,...p]));
+function hill(T,s,S){let sd=7;const rnd=()=>(sd=(sd*1664525+1013904223)%4294967296)/4294967296;let best=null;
+ for(let r=0;r<30;r++){let o=[...S];for(let i=o.length-1;i>0;i--){const j=Math.floor(rnd()*(i+1));[o[i],o[j]]=[o[j],o[i]]}
+  let cur=tot(T,s,o),imp=true;while(imp){imp=false;for(let i=0;i<o.length-1;i++){const c=[...o];[c[i],c[i+1]]=[c[i+1],c[i]];const t=tot(T,s,c);if(t<cur-1e-9){o=c;cur=t;imp=true}}}
+  if(!best||cur<best[1])best=[o,cur]}return best}
+/* ---- graph drawing ---- */
+const COL={entrance:"#dc2626",gate:"#2563eb",building:"#7c3aed",junction:"#f59e0b",internal:"#16a34a"};
+function svg(route,o={}){const re=new Set();(route||[]).forEach((n,i)=>{if(i)re.add([route[i-1],n].sort().join("|"))});
+ const Y=y=>700-y;let s=`<svg viewBox="-25 -10 600 725" xmlns="http://www.w3.org/2000/svg">`;
+ E.forEach(e=>{const a=N[e.u],b=N[e.v],r=re.has([e.u,e.v].sort().join("|"));
+  const st=r?'stroke="#2563eb" stroke-width="5" stroke-linecap="round"':e.x?'stroke="#dc2626" stroke-width="2.5" stroke-dasharray="2 4"':e.k==="i"?'stroke="#2e9e5b" stroke-width="1.2" stroke-dasharray="5 3"':'stroke="#9ca3af" stroke-width="1.4"';
+  s+=`<line x1="${a[1]}" y1="${Y(a[2])}" x2="${b[1]}" y2="${Y(b[2])}" ${st}><title>${e.u} ↔ ${e.v}: ${e.c} m${e.x?" (closed)":""}</title></line>`});
+ ids.forEach(i=>{const n=N[i];s+=`<circle cx="${n[1]}" cy="${Y(n[2])}" r="${n[0]==="entrance"?7:4.5}" fill="${COL[n[0]]}" stroke="#000" stroke-width=".6"/><text x="${n[1]+6}" y="${Y(n[2])-5}" font-size="8" font-weight="bold" fill="#111827">${i}</text>`});
+ [[o.s,"#16a34a"],[o.g,"#dc2626"]].forEach(([i,c])=>{if(i)s+=`<circle cx="${N[i][1]}" cy="${Y(N[i][2])}" r="11" fill="none" stroke="${c}" stroke-width="3"/>`});
+ (o.stops||[]).forEach((i,k)=>{s+=`<circle cx="${N[i][1]}" cy="${Y(N[i][2])}" r="8" fill="#dc2626" stroke="#fff" stroke-width="1.5"/><text x="${N[i][1]}" y="${Y(N[i][2])+3.5}" font-size="10" font-weight="bold" fill="#fff" text-anchor="middle">${k+1}</text>`});
+ return s+"</svg>"}
+/* ---- closures panel (shared by both modes) ---- */
+const CL=`<hr><label>Known closures shown on map:</label><div class="cl" id="cl"></div><label>Close / reopen a path:</label><select id="ed"></select><div class="row"><button class="d" id="cx">Close path</button><button class="g" id="op">Reopen path</button></div>`;
+function wireCL(){const draw=()=>{const c=E.filter(e=>e.x),i=$("#ed").selectedIndex;
+  $("#cl").innerHTML=c.length?c.map(e=>`⚠ ${e.u} ↔ ${e.v}: closed`).join("<br>")+"<br><small>(routes will avoid these edges)</small>":"No paths are closed.";
+  $("#ed").innerHTML=E.map((e,k)=>`<option value="${k}">${e.u} ↔ ${e.v} (${e.c} m)${e.x?" [closed]":""}</option>`).join("");$("#ed").selectedIndex=Math.max(i,0)};
+ const set=v=>{E[$("#ed").value].x=v;draw();out(`<p class="mut">Closures updated. Press the plan button again to re-plan.</p>`+svg())};
+ $("#cx").onclick=()=>set(true);$("#op").onclick=()=>set(false);draw()}
+/* ---- pages ---- */
+const pg={
+home(){$("#ttl").textContent="Smart Campus Navigator";$("#back").style.display="none";
+ $("#app").innerHTML=`<h2>Where would you like to go?</h2><p class="mut" style="text-align:center">Choose how you want to plan your route</p><div class="home">
+ <div class="card"><div class="ic">+</div><h3>Single Destination</h3><p class="mut">Find the shortest route from one point to another</p><button class="pri" onclick="location.hash='single'">Select</button></div>
+ <div class="card"><div class="ic">△</div><h3>Multi-Stop with Deadline</h3><p class="mut">Visit several locations within a fixed time budget</p><button class="pri" onclick="location.hash='multi'">Select</button></div></div>`},
+single(){$("#ttl").textContent="Option A: Single Destination";$("#back").style.display="";
+ $("#app").innerHTML=`<div class="grid"><div class="card"><h3>INPUT</h3><label>Start Location (type or pick a node)</label><input id="s" list="nl" value="SG2"><label>Destination (type or pick a node)</label><input id="g" list="nl" value="HBA"><label>Algorithm to Run</label><select id="al"><option>Compare All</option><option>BFS</option><option>DFS</option><option>UCS</option><option>A*</option></select><button class="pri" id="go">Find Route</button>${CL}</div><div class="card"><h3>OUTPUT</h3><div id="out"></div></div></div>`;
+ wireCL();out(`<p class="mut">Pick a start and a destination, then press Find Route.</p>`+svg());$("#go").onclick=runSingle},
+multi(){$("#ttl").textContent="Option B: Multi-Stop with Deadline";$("#back").style.display="";S.length=0;
+ $("#app").innerHTML=`<div class="grid"><div class="card"><h3>INPUT</h3><label>Start Location (type or pick a node)</label><input id="s" list="nl" value="SG2"><label>Required Stops (type or pick, then Add)</label><div class="row"><input id="st" list="nl" placeholder="e.g. LIB" style="flex:3"><button id="ad" style="flex:1">Add</button></div><div class="chips" id="ch"></div><div id="msg" class="mut"></div><label>Deadline (minutes)</label><input id="dl" type="number" min="1" value="20"><label>Visiting Order</label><select id="vo"><option value="fix">Follow my order (as added)</option><option value="opt">Find the best order (CSP)</option></select><label>Solver (best-order mode only)</label><select id="sv" disabled><option value="auto">Auto</option><option value="bt">Backtracking (exact)</option><option value="hc">Hill climbing</option></select><button class="pri" id="go">Plan Route</button><div class="mut" id="csp" style="margin-top:6px"></div>${CL}</div><div class="card"><h3>OUTPUT</h3><div id="out"></div></div></div>`;
+ wireCL();out(`<p class="mut">Choose a start, add at least 2 stops, set the deadline, then press Plan Route.</p>`+svg());
+ $("#ad").onclick=addStop;$("#st").onkeydown=e=>{if(e.key==="Enter")addStop()};$("#dl").oninput=chips;$("#vo").onchange=()=>{$("#sv").disabled=$("#vo").value==="fix";chips()};$("#go").onclick=runMulti;chips()}};
+const S=[];
+function chips(){$("#ch").innerHTML=S.map((x,i)=>`<span title="click to remove" onclick="S.splice(${i},1);chips()">${i+1}. ${x} ✕</span>`).join("");
+ $("#csp").textContent=$("#vo").value==="fix"?`Fixed order: ${S.join(" → ")||"…"}, total time ≤ ${$("#dl").value} min`:`CSP: Stop_1…Stop_${S.length||"n"} ∈ {${S.join(", ")||"…"}}, all-different, total time ≤ ${$("#dl").value} min`}
+function addStop(){const t=$("#st").value,n=rs(t),m=$("#msg");
+ if(!n){m.innerHTML=badN(t,"Stop");return}
+ if(n===rs($("#s").value)){m.textContent=n+" is the start node; it cannot also be a stop.";return}
+ if(S.includes(n)){m.textContent=n+" is already in the list.";return}
+ S.push(n);$("#st").value="";m.textContent="";chips()}
+function runSingle(){const s=rs($("#s").value),g=rs($("#g").value);
+ if(!s)return out(err(badN($("#s").value,"Start")));if(!g)return out(err(badN($("#g").value,"Destination")));
+ if(s===g)return out(err(`Start and destination are the same node (${s}).`));
+ const A=adj(),R=["BFS","DFS","UCS","A*"].map(n=>search(n,A,s,g)),u=R[2];
+ R.forEach(r=>r.opt=r.path.length&&u.path.length&&Math.abs(r.cost-u.cost)<.05);
+ const al=$("#al").value,all=al==="Compare All",sh=all?R:R.filter(r=>r.name===al),rec=all?R[3]:sh[0];
+ let o=`<b>${all?"Recommended Route (A*)":"Route ("+rec.name+")"}</b>`;
+ o+=rec.path.length?`<div class="bx ok">${rec.path.join(" → ")}</div><p>Total Distance: <b>${rec.cost} m</b> &nbsp; Est. Time: <b>${(rec.cost/SP).toFixed(1)} min</b> <span class="mut">(${SP} m/min)</span></p>`:`<div class="bx bad"><b>No route available</b> — the closed paths block every way from ${s} to ${g}.</div>`;
+ o+=`<b>Algorithm Comparison</b><div class="tw"><table><tr><th>Algo</th><th>Cost</th><th>Nodes Expl.</th><th>Optimal?</th></tr>${sh.map(r=>`<tr${all&&r.name==="A*"?' class="hl"':""}><td>${r.name}</td><td>${r.path.length?r.cost+" m":"—"}</td><td>${r.exp}</td><td>${r.path.length?(r.opt?"Yes":"No"):"—"}</td></tr>`).join("")}</table></div>`;
+ if(all&&R[3].path.length){const d=u.exp-R[3].exp;o+=`<p class="mut">${d>0?`A* reached the optimal path while expanding ${d} fewer nodes than UCS (${R[3].exp} vs ${u.exp}).`:`A* and UCS both expanded ${u.exp} nodes for this pair.`}</p>`}
+ out(o+svg(rec.path,{s,g}))}
+function runMulti(){const s=rs($("#s").value),dl=parseFloat($("#dl").value);
+ if(!s)return out(err(badN($("#s").value,"Start")));
+ if(S.includes(s))return out(err(`The start node (${s}) is also in the stop list. Remove it from the stops.`));
+ if(S.length<2)return out(err("Add at least 2 required stops (for one destination use Single Destination)."));
+ if(!(dl>0))return out(err("Deadline must be more than 0 minutes."));
+ const A=adj(),tb=table(A,[s,...S]);
+ if(tb.bad)return out(err(`No route between ${tb.bad[0]} and ${tb.bad[1]} with the current closures, so these stops cannot all be visited.`));
+ const T=tb.T,n=S.length,sv=$("#sv").value,fixed=$("#vo").value==="fix",exact=!fixed&&(sv==="bt"?n<=9:(sv==="auto"&&n<=8));
+ let order,total,feas=false,oth=[],rej=[],info,minp,tip="";
+ if(fixed){order=[...S];const t=tot(T,s,order);if(t<=dl+1e-9){feas=true;total=t}else{minp=t;const al=n<=8?backtrack(T,s,S,Infinity).valid[0]:hill(T,s,S);tip=al[1]<=dl+1e-9?` Tip: the order ${[s,...al[0]].join(" → ")} takes ${al[1].toFixed(1)} min and fits the deadline. Choose “Find the best order”.`:` Even the fastest possible order needs ${al[1].toFixed(1)} min.`}
+  info="Order fixed by you: stops are visited exactly in the order they were added. Each leg uses the shortest path (A*)."}
+ else if(exact){const {valid,st}=backtrack(T,s,S,dl);
+  if(valid.length){feas=true;[order,total]=valid[0];oth=valid.slice(1,6)}else{const f=backtrack(T,s,S,Infinity).valid[0];order=f[0];minp=f[1]}
+  if(n<=7)rej=perms(S).map(p=>[p,tot(T,s,p)]).filter(x=>x[1]>dl+1e-9).sort((a,b)=>a[1]-b[1]).slice(0,3);
+  info=`Method: backtracking (exact). ${st.v} partial assignments visited, ${st.p} branches cut off because they already broke the deadline.`}
+ else{const [oo,t]=hill(T,s,S);order=oo;if(t<=dl+1e-9){feas=true;total=t}else minp=t;info="Method: hill climbing with 30 random restarts (adjacent swaps). Heuristic — fast for many stops, but not guaranteed optimal."}
+ const ch=[s,...order],legs=ch.slice(1).map((b,i)=>({a:ch[i],b,t:T[ch[i]][b].m/SP,p:T[ch[i]][b].p})),fp=[];legs.forEach(l=>fp.push(...(fp.length?l.p.slice(1):l.p)));
+ const fo=x=>[s,...x].join(" → ");let o="";
+ o+=feas?`<b>Feasible — ${fixed?"Your":exact?"Optimal":"Best-found"} Visiting Order</b><div class="bx ok">${fo(order)}</div><p>Total Time: <b>${total.toFixed(1)} min</b> (within ${dl} min deadline)</p>`
+  :`<b>Not feasible</b><div class="bx bad">The requested stops cannot be covered in ${dl} min. ${fo(order)} needs <b>${minp.toFixed(1)} min</b> (${fixed?"your order":exact?"fastest possible order":"best order found, not proven minimum"}), so about <b>${(minp-dl).toFixed(1)} more minutes</b> are required.${tip}</div>`;
+ o+=`<b>Leg-by-Leg Breakdown</b><div class="tw"><table><tr><th>Leg</th><th>Cost</th><th>Path</th></tr>${legs.map(l=>`<tr><td>${l.a} → ${l.b}</td><td>${l.t.toFixed(1)} min</td><td class="mut">${l.p.join(" › ")}</td></tr>`).join("")}</table></div>`;
+ const ot=oth.map(x=>`<div>${fo(x[0])} — ${x[1].toFixed(1)} min</div>`).join("")+rej.map(x=>`<div style="color:var(--badt)">${fo(x[0])} — ${x[1].toFixed(1)} min (rejected, over deadline)</div>`).join("");
+ if(ot)o+=`<p class="mut">Other orderings: valid ones within the deadline are listed, the lowest-cost one is selected.</p><div class="lst">${ot}</div>`;
+ out(o+`<p class="mut">${info}</p>`+svg(fp,{s,stops:order}))}
+const route=()=>{const k=location.hash.slice(1);(pg[k]||pg.home)()};
+addEventListener("hashchange",route);route();
+</script></body></html>
