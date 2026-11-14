@@ -2,7 +2,7 @@
 
 An AI-powered campus navigation system that helps users find routes between campus locations and plan efficient multi-stop journeys using Artificial Intelligence search algorithms and Constraint Satisfaction techniques.
 
-🌐 **Live Demo:** [Open Smart Campus Navigator](https://pratibha289673.github.io/smart-campus-navigator-sau/)
+🌐 **Live Demo:** [Open Smart Campus Navigator] https://pratibha289673.github.io/smart-campus-navigator-sau/
 
 ---
 
