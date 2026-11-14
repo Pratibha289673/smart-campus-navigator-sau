@@ -1,0 +1,1122 @@
+{
+  "meta": {
+    "unit": "metres",
+    "walk_speed_m_per_min": 84.0,
+    "note": "x east, y north, origin at south-west corner of the campus"
+  },
+  "nodes": {
+    "SG2": {
+      "id": "SG2",
+      "kml_name": "SAU gate 2",
+      "type": "entrance",
+      "building": "SAU Gate 2",
+      "lon": 77.19851519681401,
+      "lat": 28.48395979293289,
+      "x": 127.49,
+      "y": 264.05
+    },
+    "SG1": {
+      "id": "SG1",
+      "kml_name": "SAU gate 1",
+      "type": "entrance",
+      "building": "SAU Gate 1",
+      "lon": 77.20169629512219,
+      "lat": 28.48158513436685,
+      "x": 438.41,
+      "y": 0.0
+    },
+    "AB1G1": {
+      "id": "AB1G1",
+      "kml_name": "AB1G1",
+      "type": "gate",
+      "building": "Academic Block 1",
+      "lon": 77.19828041291186,
+      "lat": 28.48442282894932,
+      "x": 104.55,
+      "y": 315.54
+    },
+    "AB1G2": {
+      "id": "AB1G2",
+      "kml_name": "AB1G2",
+      "type": "gate",
+      "building": "Academic Block 1",
+      "lon": 77.19883103303823,
+      "lat": 28.48472230802183,
+      "x": 158.36,
+      "y": 348.84
+    },
+    "AB2G1": {
+      "id": "AB2G1",
+      "kml_name": "AB2G1",
+      "type": "gate",
+      "building": "Academic Block 2",
+      "lon": 77.19771897257993,
+      "lat": 28.48483333103805,
+      "x": 49.67,
+      "y": 361.18
+    },
+    "AB2G2": {
+      "id": "AB2G2",
+      "kml_name": "AB2_G2",
+      "type": "gate",
+      "building": "Academic Block 2",
+      "lon": 77.19798591389231,
+      "lat": 28.48532353754307,
+      "x": 75.76,
+      "y": 415.69
+    },
+    "AB3G1": {
+      "id": "AB3G1",
+      "kml_name": "AB3G1",
+      "type": "gate",
+      "building": "Academic Block 3",
+      "lon": 77.19721073764721,
+      "lat": 28.48573165793918,
+      "x": 0.0,
+      "y": 461.07
+    },
+    "AB3G2": {
+      "id": "AB3G2",
+      "kml_name": "AB3_G2",
+      "type": "gate",
+      "building": "Academic Block 3",
+      "lon": 77.19793063319297,
+      "lat": 28.48545637435371,
+      "x": 70.36,
+      "y": 430.46
+    },
+    "AB4G1": {
+      "id": "AB4G1",
+      "kml_name": "AB4G1",
+      "type": "gate",
+      "building": "Academic Block 4",
+      "lon": 77.19725740320537,
+      "lat": 28.48613504641074,
+      "x": 4.56,
+      "y": 505.93
+    },
+    "AB4G2": {
+      "id": "AB4G2",
+      "kml_name": "AB4G2",
+      "type": "gate",
+      "building": "Academic Block 4",
+      "lon": 77.19808803563738,
+      "lat": 28.48646107436658,
+      "x": 85.74,
+      "y": 542.18
+    },
+    "AB5G1": {
+      "id": "AB5G1",
+      "kml_name": "AB5G1",
+      "type": "gate",
+      "building": "Academic Block 5",
+      "lon": 77.19772359394501,
+      "lat": 28.48715991650297,
+      "x": 50.13,
+      "y": 619.89
+    },
+    "AB5G2": {
+      "id": "AB5G2",
+      "kml_name": "AB5G2",
+      "type": "gate",
+      "building": "Academic Block 5",
+      "lon": 77.19817396649286,
+      "lat": 28.48659654518539,
+      "x": 94.14,
+      "y": 557.24
+    },
+    "AB5G3": {
+      "id": "AB5G3",
+      "kml_name": "AB5G3",
+      "type": "gate",
+      "building": "Academic Block 5",
+      "lon": 77.19830005746631,
+      "lat": 28.48704184675037,
+      "x": 106.47,
+      "y": 606.76
+    },
+    "UB": {
+      "id": "UB",
+      "kml_name": "UTILITY_BUILDING",
+      "type": "building",
+      "building": "Utility Building",
+      "lon": 77.19781169510077,
+      "lat": 28.48766108113335,
+      "x": 58.74,
+      "y": 675.61
+    },
+    "AT": {
+      "id": "AT",
+      "kml_name": "AMPHITEATHRE",
+      "type": "building",
+      "building": "Amphitheatre",
+      "lon": 77.19869539191606,
+      "lat": 28.48581431768292,
+      "x": 145.11,
+      "y": 470.26
+    },
+    "CCG1": {
+      "id": "CCG1",
+      "kml_name": "CONVENTION CENTRE G1",
+      "type": "gate",
+      "building": "Convention Centre",
+      "lon": 77.19832073514166,
+      "lat": 28.48625246275888,
+      "x": 108.49,
+      "y": 518.98
+    },
+    "CCG2": {
+      "id": "CCG2",
+      "kml_name": "CONVENTION CENTRE G2",
+      "type": "gate",
+      "building": "Convention Centre",
+      "lon": 77.1987913833523,
+      "lat": 28.48698194782692,
+      "x": 154.49,
+      "y": 600.1
+    },
+    "CCG3": {
+      "id": "CCG3",
+      "kml_name": "CONVENTION CENTRE G3",
+      "type": "gate",
+      "building": "Convention Centre",
+      "lon": 77.19882609856994,
+      "lat": 28.48634339737621,
+      "x": 157.88,
+      "y": 529.09
+    },
+    "AB6G1": {
+      "id": "AB6G1",
+      "kml_name": "AB6G1",
+      "type": "gate",
+      "building": "Academic Block 6",
+      "lon": 77.19917323826442,
+      "lat": 28.48555681819743,
+      "x": 191.81,
+      "y": 441.63
+    },
+    "AB6G2": {
+      "id": "AB6G2",
+      "kml_name": "AB6G2",
+      "type": "gate",
+      "building": "Academic Block 6",
+      "lon": 77.19871502948017,
+      "lat": 28.48523453111363,
+      "x": 147.03,
+      "y": 405.79
+    },
+    "AB7G1": {
+      "id": "AB7G1",
+      "kml_name": "AB7G1",
+      "type": "gate",
+      "building": "Academic Block 7",
+      "lon": 77.19988462006283,
+      "lat": 28.48506561078058,
+      "x": 261.34,
+      "y": 387.01
+    },
+    "AB7G2": {
+      "id": "AB7G2",
+      "kml_name": "AB7G2",
+      "type": "gate",
+      "building": "Academic Block 7",
+      "lon": 77.19954577449461,
+      "lat": 28.48462952873661,
+      "x": 228.22,
+      "y": 338.52
+    },
+    "AB8G1": {
+      "id": "AB8G1",
+      "kml_name": "AB8G1",
+      "type": "building",
+      "building": "Academic Block 8",
+      "lon": 77.20085783907507,
+      "lat": 28.48500610941536,
+      "x": 356.46,
+      "y": 380.4
+    },
+    "LIB": {
+      "id": "LIB",
+      "kml_name": "LIBRARY BLOCK",
+      "type": "building",
+      "building": "Library",
+      "lon": 77.20112860700195,
+      "lat": 28.48482638338471,
+      "x": 382.92,
+      "y": 360.41
+    },
+    "ADMING1": {
+      "id": "ADMING1",
+      "kml_name": "ADMIN BLOCK G1",
+      "type": "gate",
+      "building": "Admin Block",
+      "lon": 77.20035675288109,
+      "lat": 28.48478066599625,
+      "x": 307.48,
+      "y": 355.33
+    },
+    "ADMING2": {
+      "id": "ADMING2",
+      "kml_name": "ADMIN BLOCK G2",
+      "type": "gate",
+      "building": "Admin Block",
+      "lon": 77.20036172578293,
+      "lat": 28.4844304030701,
+      "x": 307.97,
+      "y": 316.38
+    },
+    "FRB": {
+      "id": "FRB",
+      "kml_name": "FACULTY RESEDENTIAL BUILDING",
+      "type": "building",
+      "building": "Faculty Residential Building",
+      "lon": 77.20193080997213,
+      "lat": 28.48442485225728,
+      "x": 461.33,
+      "y": 315.76
+    },
+    "GH": {
+      "id": "GH",
+      "kml_name": "GUEST HOUSE",
+      "type": "building",
+      "building": "Guest House",
+      "lon": 77.20280548243709,
+      "lat": 28.48358385063479,
+      "x": 546.81,
+      "y": 222.25
+    },
+    "HBB": {
+      "id": "HBB",
+      "kml_name": "HOSTEL BLOCK B",
+      "type": "building",
+      "building": "Hostel Block B",
+      "lon": 77.20191460415803,
+      "lat": 28.48323484388943,
+      "x": 459.74,
+      "y": 183.44
+    },
+    "HBA": {
+      "id": "HBA",
+      "kml_name": "HOSTEL BLOCK A",
+      "type": "building",
+      "building": "Hostel Block A",
+      "lon": 77.20154828371943,
+      "lat": 28.48246060231475,
+      "x": 423.94,
+      "y": 97.35
+    },
+    "BC": {
+      "id": "BC",
+      "kml_name": "Basketball court",
+      "type": "building",
+      "building": "Basketball Court",
+      "lon": 77.2013005342365,
+      "lat": 28.48277111139943,
+      "x": 399.72,
+      "y": 131.87
+    },
+    "VC": {
+      "id": "VC",
+      "kml_name": "volleyball court",
+      "type": "building",
+      "building": "Volleyball Court",
+      "lon": 77.2004845518675,
+      "lat": 28.4839564679718,
+      "x": 319.97,
+      "y": 263.68
+    },
+    "PGG1": {
+      "id": "PGG1",
+      "kml_name": "playground g1",
+      "type": "gate",
+      "building": "Playground",
+      "lon": 77.20165008210097,
+      "lat": 28.48332876996339,
+      "x": 433.89,
+      "y": 193.88
+    },
+    "PGG2": {
+      "id": "PGG2",
+      "kml_name": "playground gate2",
+      "type": "gate",
+      "building": "Playground",
+      "lon": 77.20131294483467,
+      "lat": 28.48402979128458,
+      "x": 400.94,
+      "y": 271.83
+    },
+    "PGG3": {
+      "id": "PGG3",
+      "kml_name": "playground g3",
+      "type": "gate",
+      "building": "Playground",
+      "lon": 77.20088400550873,
+      "lat": 28.48344508775787,
+      "x": 359.01,
+      "y": 206.82
+    },
+    "J1": {
+      "id": "J1",
+      "kml_name": "J1_SAUG2_AB1G1",
+      "type": "junction",
+      "building": null,
+      "lon": 77.19863558756292,
+      "lat": 28.48411261997032,
+      "x": 139.26,
+      "y": 281.04
+    },
+    "J2": {
+      "id": "J2",
+      "kml_name": "J2_AB7G2_AB1G2",
+      "type": "junction",
+      "building": null,
+      "lon": 77.19928775697598,
+      "lat": 28.48464917537282,
+      "x": 203.0,
+      "y": 340.71
+    },
+    "J3": {
+      "id": "J3",
+      "kml_name": "J3_UB_AB5G3_CCG2",
+      "type": "junction",
+      "building": null,
+      "lon": 77.19846960164324,
+      "lat": 28.48729224310341,
+      "x": 123.04,
+      "y": 634.6
+    },
+    "J4": {
+      "id": "J4",
+      "kml_name": "J4AB8G1_LB_ADMING1_ADMING2",
+      "type": "junction",
+      "building": null,
+      "lon": 77.20059961241817,
+      "lat": 28.48462703970312,
+      "x": 331.22,
+      "y": 338.24
+    },
+    "J5": {
+      "id": "J5",
+      "kml_name": "J5_HBB_GH_PGG1_PGG2_FRB",
+      "type": "junction",
+      "building": null,
+      "lon": 77.20206898150448,
+      "lat": 28.48362864381773,
+      "x": 474.83,
+      "y": 227.23
+    },
+    "J6": {
+      "id": "J6",
+      "kml_name": "J6_HBB_HBA_BC_PG1_PG3",
+      "type": "junction",
+      "building": null,
+      "lon": 77.20149921286524,
+      "lat": 28.4829630052934,
+      "x": 419.14,
+      "y": 153.21
+    },
+    "J7": {
+      "id": "J7",
+      "kml_name": "J7_AB2G1_AB3G1_AB2G2_AB3G2",
+      "type": "junction",
+      "building": null,
+      "lon": 77.19743303139698,
+      "lat": 28.48502717815765,
+      "x": 21.73,
+      "y": 382.74
+    },
+    "J8": {
+      "id": "J8",
+      "kml_name": "J8_AB5G1_AB4G1_AB5G2_AB4G2",
+      "type": "junction",
+      "building": null,
+      "lon": 77.19751476880744,
+      "lat": 28.48672363435154,
+      "x": 29.72,
+      "y": 571.38
+    },
+    "J9": {
+      "id": "J9",
+      "kml_name": "J9_ADMING2_VC_AB7G2",
+      "type": "junction",
+      "building": null,
+      "lon": 77.20012640591402,
+      "lat": 28.48415477089543,
+      "x": 284.97,
+      "y": 285.73
+    },
+    "IC_AB1_AB2": {
+      "id": "IC_AB1_AB2",
+      "kml_name": "IC_AB1_AB2",
+      "type": "internal",
+      "building": null,
+      "lon": 77.19842852753949,
+      "lat": 28.48501810719229,
+      "x": 119.02,
+      "y": 381.73
+    },
+    "IC_AB3_AB4": {
+      "id": "IC_AB3_AB4",
+      "kml_name": "IC_AB3_AB4",
+      "type": "internal",
+      "building": null,
+      "lon": 77.19776196805591,
+      "lat": 28.48588912791437,
+      "x": 53.88,
+      "y": 478.58
+    },
+    "IC_AB6_AB7": {
+      "id": "IC_AB6_AB7",
+      "kml_name": "IC_AB6_AB7",
+      "type": "internal",
+      "building": null,
+      "lon": 77.19920037454084,
+      "lat": 28.48494140838213,
+      "x": 194.46,
+      "y": 373.2
+    }
+  },
+  "edges": [
+    {
+      "u": "AB1G1",
+      "v": "AB2G1",
+      "cost": 86.9,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AB2G1_AB1G1"
+    },
+    {
+      "u": "AB1G1",
+      "v": "IC_AB1_AB2",
+      "cost": 67.8,
+      "type": "internal",
+      "closed": false,
+      "name": "IC_AB1_AB2<->AB1G1"
+    },
+    {
+      "u": "AB1G1",
+      "v": "J1",
+      "cost": 53.3,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AB1G1_J1"
+    },
+    {
+      "u": "AB1G2",
+      "v": "IC_AB1_AB2",
+      "cost": 51.3,
+      "type": "internal",
+      "closed": false,
+      "name": "IC_AB1_AB2<->AB1G2"
+    },
+    {
+      "u": "AB1G2",
+      "v": "J2",
+      "cost": 60.6,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AB1G2_J2"
+    },
+    {
+      "u": "AB2G1",
+      "v": "IC_AB1_AB2",
+      "cost": 72.4,
+      "type": "internal",
+      "closed": false,
+      "name": "IC_AB1_AB2<->AB2G1"
+    },
+    {
+      "u": "AB2G1",
+      "v": "J7",
+      "cost": 44.4,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AB2G1_J7"
+    },
+    {
+      "u": "AB2G2",
+      "v": "AB3G2",
+      "cost": 15.8,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AB3G2_AB2G2"
+    },
+    {
+      "u": "AB2G2",
+      "v": "AT",
+      "cost": 123.6,
+      "type": "path",
+      "closed": false,
+      "name": "DISAT_AB2G2"
+    },
+    {
+      "u": "AB2G2",
+      "v": "IC_AB1_AB2",
+      "cost": 55.0,
+      "type": "internal",
+      "closed": false,
+      "name": "IC_AB1_AB2<->AB2G2"
+    },
+    {
+      "u": "AB2G2",
+      "v": "J7",
+      "cost": 67.0,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J7_AB2G2"
+    },
+    {
+      "u": "AB3G1",
+      "v": "AB4G1",
+      "cost": 71.0,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AB4G1_AB3G1"
+    },
+    {
+      "u": "AB3G1",
+      "v": "IC_AB3_AB4",
+      "cost": 56.7,
+      "type": "internal",
+      "closed": false,
+      "name": "IC_AB3_AB4<->AB3G1"
+    },
+    {
+      "u": "AB3G1",
+      "v": "J7",
+      "cost": 104.5,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AB3G1_J7"
+    },
+    {
+      "u": "AB3G2",
+      "v": "AT",
+      "cost": 118.9,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AT_AB3G2"
+    },
+    {
+      "u": "AB3G2",
+      "v": "IC_AB3_AB4",
+      "cost": 50.9,
+      "type": "internal",
+      "closed": false,
+      "name": "IC_AB3_AB4<->AB3G2"
+    },
+    {
+      "u": "AB3G2",
+      "v": "J7",
+      "cost": 68.2,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J7_AB3G2"
+    },
+    {
+      "u": "AB4G1",
+      "v": "IC_AB3_AB4",
+      "cost": 56.4,
+      "type": "internal",
+      "closed": false,
+      "name": "IC_AB3_AB4<->AB4G1"
+    },
+    {
+      "u": "AB4G1",
+      "v": "J8",
+      "cost": 78.9,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AB4G1_J8"
+    },
+    {
+      "u": "AB4G2",
+      "v": "AB5G2",
+      "cost": 18.9,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AB5G2_AB4G2"
+    },
+    {
+      "u": "AB4G2",
+      "v": "AT",
+      "cost": 147.2,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AB4G2_AT"
+    },
+    {
+      "u": "AB4G2",
+      "v": "CCG1",
+      "cost": 35.7,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_CCG1_AB4G2"
+    },
+    {
+      "u": "AB4G2",
+      "v": "IC_AB3_AB4",
+      "cost": 71.2,
+      "type": "internal",
+      "closed": false,
+      "name": "IC_AB3_AB4<->AB4G2"
+    },
+    {
+      "u": "AB4G2",
+      "v": "J8",
+      "cost": 63.2,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J8_AB4G2"
+    },
+    {
+      "u": "AB5G1",
+      "v": "J8",
+      "cost": 66.3,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J8_AB5G1"
+    },
+    {
+      "u": "AB5G1",
+      "v": "UB",
+      "cost": 73.6,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AB5G1_UB"
+    },
+    {
+      "u": "AB5G2",
+      "v": "AT",
+      "cost": 165.1,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AB5G2_AT"
+    },
+    {
+      "u": "AB5G2",
+      "v": "CCG1",
+      "cost": 41.0,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AB5G2_CCG1"
+    },
+    {
+      "u": "AB5G2",
+      "v": "J8",
+      "cost": 66.0,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AB5G2_J8"
+    },
+    {
+      "u": "AB5G3",
+      "v": "J3",
+      "cost": 32.4,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J3_AB5G3"
+    },
+    {
+      "u": "AB6G1",
+      "v": "AB6G2",
+      "cost": 107.2,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AB6G2_AB6G1"
+    },
+    {
+      "u": "AB6G1",
+      "v": "AB7G1",
+      "cost": 108.3,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AB7G1_AB6G1"
+    },
+    {
+      "u": "AB6G1",
+      "v": "CCG1",
+      "cost": 137.3,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AB6G1_CCG1"
+    },
+    {
+      "u": "AB6G1",
+      "v": "CCG3",
+      "cost": 110.1,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AB6G1_CCG3"
+    },
+    {
+      "u": "AB6G1",
+      "v": "IC_AB6_AB7",
+      "cost": 68.5,
+      "type": "internal",
+      "closed": false,
+      "name": "IC_AB6_AB7<->AB6G1"
+    },
+    {
+      "u": "AB6G2",
+      "v": "AT",
+      "cost": 142.3,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_AT_AB6G2"
+    },
+    {
+      "u": "AB6G2",
+      "v": "IC_AB6_AB7",
+      "cost": 57.6,
+      "type": "internal",
+      "closed": false,
+      "name": "IC_AB6_AB7<->AB6G2"
+    },
+    {
+      "u": "AB6G2",
+      "v": "J2",
+      "cost": 111.0,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J2_AB6G2"
+    },
+    {
+      "u": "AB7G1",
+      "v": "ADMING1",
+      "cost": 68.1,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_ABG1_AB7G1"
+    },
+    {
+      "u": "AB7G1",
+      "v": "IC_AB6_AB7",
+      "cost": 68.3,
+      "type": "internal",
+      "closed": false,
+      "name": "IC_AB6_AB7<->AB7G1"
+    },
+    {
+      "u": "AB7G2",
+      "v": "IC_AB6_AB7",
+      "cost": 48.4,
+      "type": "internal",
+      "closed": false,
+      "name": "IC_AB6_AB7<->AB7G2"
+    },
+    {
+      "u": "AB7G2",
+      "v": "J2",
+      "cost": 44.8,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J7_AB7G2"
+    },
+    {
+      "u": "AB7G2",
+      "v": "J9",
+      "cost": 87.9,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J9_AB7G2"
+    },
+    {
+      "u": "AB8G1",
+      "v": "J4",
+      "cost": 59.3,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J4_AB8G1"
+    },
+    {
+      "u": "AB8G1",
+      "v": "LIB",
+      "cost": 33.2,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_LIBRARY_AB8G1"
+    },
+    {
+      "u": "ADMING1",
+      "v": "J4",
+      "cost": 39.5,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J4_ADMING1"
+    },
+    {
+      "u": "ADMING2",
+      "v": "J4",
+      "cost": 37.3,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_ABG2_J4"
+    },
+    {
+      "u": "ADMING2",
+      "v": "J9",
+      "cost": 38.4,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J9_ADMING2"
+    },
+    {
+      "u": "BC",
+      "v": "HBA",
+      "cost": 50.3,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_HOSTELA_BC"
+    },
+    {
+      "u": "BC",
+      "v": "J6",
+      "cost": 30.4,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J6_BC"
+    },
+    {
+      "u": "CCG1",
+      "v": "CCG3",
+      "cost": 99.5,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_CCG1_CCG3"
+    },
+    {
+      "u": "CCG2",
+      "v": "CCG3",
+      "cost": 91.1,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_CCG2_CCG3"
+    },
+    {
+      "u": "CCG2",
+      "v": "J3",
+      "cost": 57.3,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_CCG2_J3"
+    },
+    {
+      "u": "FRB",
+      "v": "J5",
+      "cost": 149.2,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J5_FRB"
+    },
+    {
+      "u": "FRB",
+      "v": "PGG2",
+      "cost": 83.8,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_PGG2_FRB"
+    },
+    {
+      "u": "GH",
+      "v": "J5",
+      "cost": 120.0,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J5_GUESTHOUSE"
+    },
+    {
+      "u": "HBA",
+      "v": "J6",
+      "cost": 80.7,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J6_HOSTELA"
+    },
+    {
+      "u": "HBA",
+      "v": "SG1",
+      "cost": 177.1,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_HOSTELA_SAUGATE1"
+    },
+    {
+      "u": "HBB",
+      "v": "J5",
+      "cost": 62.4,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_HOSTELB_J5"
+    },
+    {
+      "u": "HBB",
+      "v": "J6",
+      "cost": 59.8,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J6_HBB"
+    },
+    {
+      "u": "J1",
+      "v": "J2",
+      "cost": 99.9,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_SAUG2_J2"
+    },
+    {
+      "u": "J1",
+      "v": "SG2",
+      "cost": 20.7,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_SG2_J1"
+    },
+    {
+      "u": "J3",
+      "v": "UB",
+      "cost": 76.3,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_UB_J3"
+    },
+    {
+      "u": "J4",
+      "v": "LIB",
+      "cost": 74.4,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_LIBRARY_J4"
+    },
+    {
+      "u": "J4",
+      "v": "PGG2",
+      "cost": 115.1,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_PGG2_J4"
+    },
+    {
+      "u": "J5",
+      "v": "PGG1",
+      "cost": 61.8,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J5_PGG1"
+    },
+    {
+      "u": "J6",
+      "v": "PGG1",
+      "cost": 52.9,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J6_PGG1"
+    },
+    {
+      "u": "J6",
+      "v": "PGG3",
+      "cost": 85.0,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_J6_PGG3"
+    },
+    {
+      "u": "J9",
+      "v": "VC",
+      "cost": 49.6,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_VC_J9"
+    },
+    {
+      "u": "PGG3",
+      "v": "VC",
+      "cost": 91.9,
+      "type": "path",
+      "closed": false,
+      "name": "DIS_VC_PGG3"
+    }
+  ],
+  "buildings": {
+    "SAU Gate 2": [
+      "SG2"
+    ],
+    "SAU Gate 1": [
+      "SG1"
+    ],
+    "Academic Block 1": [
+      "AB1G1",
+      "AB1G2"
+    ],
+    "Academic Block 2": [
+      "AB2G1",
+      "AB2G2"
+    ],
+    "Academic Block 3": [
+      "AB3G1",
+      "AB3G2"
+    ],
+    "Academic Block 4": [
+      "AB4G1",
+      "AB4G2"
+    ],
+    "Academic Block 5": [
+      "AB5G1",
+      "AB5G2",
+      "AB5G3"
+    ],
+    "Utility Building": [
+      "UB"
+    ],
+    "Amphitheatre": [
+      "AT"
+    ],
+    "Convention Centre": [
+      "CCG1",
+      "CCG2",
+      "CCG3"
+    ],
+    "Academic Block 6": [
+      "AB6G1",
+      "AB6G2"
+    ],
+    "Academic Block 7": [
+      "AB7G1",
+      "AB7G2"
+    ],
+    "Academic Block 8": [
+      "AB8G1"
+    ],
+    "Library": [
+      "LIB"
+    ],
+    "Admin Block": [
+      "ADMING1",
+      "ADMING2"
+    ],
+    "Faculty Residential Building": [
+      "FRB"
+    ],
+    "Guest House": [
+      "GH"
+    ],
+    "Hostel Block B": [
+      "HBB"
+    ],
+    "Hostel Block A": [
+      "HBA"
+    ],
+    "Basketball Court": [
+      "BC"
+    ],
+    "Volleyball Court": [
+      "VC"
+    ],
+    "Playground": [
+      "PGG1",
+      "PGG2",
+      "PGG3"
+    ]
+  }
+}

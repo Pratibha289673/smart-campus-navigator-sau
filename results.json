@@ -1,0 +1,242 @@
+{
+ "n_nodes": 47,
+ "n_edges": 70,
+ "types": {
+  "entrance": 2,
+  "gate": 23,
+  "building": 10,
+  "junction": 9,
+  "internal": 3
+ },
+ "n_path": 58,
+ "n_int": 12,
+ "E1": {
+  "pairs": 1081,
+  "astar_equals_ucs": 1081,
+  "algos": {
+   "BFS": {
+    "mean_exp": 25.684551341350602,
+    "median_exp": 27,
+    "pct_opt": 54.94912118408881,
+    "mean_over": 11.559903993716107,
+    "max_over": 125.82384661473935
+   },
+   "DFS": {
+    "mean_exp": 27.662349676225716,
+    "median_exp": 29,
+    "pct_opt": 3.330249768732655,
+    "mean_over": 307.9378164515777,
+    "max_over": 3279.947916666667
+   },
+   "UCS": {
+    "mean_exp": 25.49028677150786,
+    "median_exp": 26,
+    "pct_opt": 100.0,
+    "mean_over": 0.0,
+    "max_over": 0.0
+   },
+   "A*": {
+    "mean_exp": 12.00277520814061,
+    "median_exp": 10,
+    "pct_opt": 100.0,
+    "mean_over": 0.0,
+    "max_over": 0.0
+   }
+  },
+  "reduction_mean": 52.062320249549664,
+  "reduction_median": 54.83870967741935,
+  "reduction_max": 83.87096774193549,
+  "reduction_min": 0.0,
+  "pairs_astar_fewer": 1051
+ },
+ "E2_demo": [
+  {
+   "s": "SG2",
+   "t": "HBA",
+   "closed": [
+    "J2",
+    "AB7G2"
+   ],
+   "before": 560.5,
+   "after": 732.7,
+   "path_before": [
+    "SG2",
+    "J1",
+    "J2",
+    "AB7G2",
+    "J9",
+    "VC",
+    "PGG3",
+    "J6",
+    "BC",
+    "HBA"
+   ],
+   "path_after": [
+    "SG2",
+    "J1",
+    "J2",
+    "AB6G2",
+    "IC_AB6_AB7",
+    "AB7G2",
+    "J9",
+    "VC",
+    "PGG3",
+    "J6",
+    "BC",
+    "HBA"
+   ],
+   "exp_astar": 23,
+   "exp_ucs": 44
+  },
+  {
+   "s": "SG1",
+   "t": "UB",
+   "closed": [
+    "AB7G2",
+    "IC_AB6_AB7"
+   ],
+   "before": 1023.9,
+   "after": 1110.7,
+   "path_before": [
+    "SG1",
+    "HBA",
+    "J6",
+    "PGG3",
+    "VC",
+    "J9",
+    "AB7G2",
+    "IC_AB6_AB7",
+    "AB6G1",
+    "CCG3",
+    "CCG2",
+    "J3",
+    "UB"
+   ],
+   "path_after": [
+    "SG1",
+    "HBA",
+    "J6",
+    "PGG3",
+    "VC",
+    "J9",
+    "ADMING2",
+    "J4",
+    "ADMING1",
+    "AB7G1",
+    "AB6G1",
+    "CCG3",
+    "CCG2",
+    "J3",
+    "UB"
+   ],
+   "exp_astar": 38,
+   "exp_ucs": 47
+  },
+  {
+   "s": "AB1G1",
+   "t": "GH",
+   "closed": [
+    "J9",
+    "VC"
+   ],
+   "before": 747.1,
+   "after": 829.7,
+   "path_before": [
+    "AB1G1",
+    "J1",
+    "J2",
+    "AB7G2",
+    "J9",
+    "VC",
+    "PGG3",
+    "J6",
+    "PGG1",
+    "J5",
+    "GH"
+   ],
+   "path_after": [
+    "AB1G1",
+    "J1",
+    "J2",
+    "AB7G2",
+    "J9",
+    "ADMING2",
+    "J4",
+    "PGG2",
+    "FRB",
+    "J5",
+    "GH"
+   ],
+   "exp_astar": 29,
+   "exp_ucs": 42
+  }
+ ],
+ "E2_random": {
+  "trials": 500,
+  "both_found_equal_cost": 497,
+  "both_no_route": 3,
+  "mismatch": 0
+ },
+ "E3": {
+  "3": {
+   "N": 60,
+   "hc_match": 100.0,
+   "hc_gap_mean": 0.0,
+   "hc_gap_max": 0.0,
+   "fixed_excess_mean": 32.979388710649445,
+   "visited_mean": 11.5,
+   "full_tree": 16,
+   "exact_time_mean_s": 7.545948028564453e-06
+  },
+  "4": {
+   "N": 60,
+   "hc_match": 100.0,
+   "hc_gap_mean": 0.0,
+   "hc_gap_max": 0.0,
+   "fixed_excess_mean": 46.97869835504807,
+   "visited_mean": 37.05,
+   "full_tree": 65,
+   "exact_time_mean_s": 2.701282501220703e-05
+  },
+  "5": {
+   "N": 60,
+   "hc_match": 98.33333333333333,
+   "hc_gap_mean": 0.1686807653575029,
+   "hc_gap_max": 10.120845921450151,
+   "fixed_excess_mean": 62.103800281764684,
+   "visited_mean": 131.21666666666667,
+   "full_tree": 326,
+   "exact_time_mean_s": 0.00014127492904663085
+  },
+  "6": {
+   "N": 60,
+   "hc_match": 65.0,
+   "hc_gap_mean": 3.8983828737704855,
+   "hc_gap_max": 33.36263092360652,
+   "fixed_excess_mean": 65.60000836157973,
+   "visited_mean": 578.9666666666667,
+   "full_tree": 1957,
+   "exact_time_mean_s": 0.0008049686749776204
+  },
+  "7": {
+   "N": 60,
+   "hc_match": 46.666666666666664,
+   "hc_gap_mean": 8.006918353585878,
+   "hc_gap_max": 45.778408142833335,
+   "fixed_excess_mean": 90.81751852031883,
+   "visited_mean": 2191.133333333333,
+   "full_tree": 13700,
+   "exact_time_mean_s": 0.007300480206807455
+  },
+  "8": {
+   "N": 60,
+   "hc_match": 23.333333333333332,
+   "hc_gap_mean": 12.863701084399217,
+   "hc_gap_max": 49.17680744452397,
+   "fixed_excess_mean": 91.61250474911598,
+   "visited_mean": 11077.75,
+   "full_tree": 109601,
+   "exact_time_mean_s": 0.06513181527455648
+  }
+ }
+}
