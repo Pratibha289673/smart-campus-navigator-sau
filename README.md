@@ -2,11 +2,11 @@
 
 An AI-powered campus navigation system that helps users find routes between campus locations and plan efficient multi-stop journeys using Artificial Intelligence search algorithms and Constraint Satisfaction techniques.
 
-🌐 **Live Demo:** [Open Smart Campus Navigator https://pratibha289673.github.io/smart-campus-navigator-sau/]
+**Live Demo:** [Open Smart Campus Navigator https://pratibha289673.github.io/smart-campus-navigator-sau/]
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 Smart Campus Navigator is designed to make navigation across a university campus easier and more efficient.
 
@@ -14,7 +14,7 @@ The campus map is represented as a weighted graph consisting of **47 nodes and 7
 
 The system uses different search algorithms to find routes between locations. It also supports multi-stop route planning, allowing users to visit multiple campus locations while considering travel-time constraints.
 
-## ✨ Key Features
+## Key Features
 
 - **Single-Destination Navigation:** Find routes between a selected starting point and destination.
 - **Multiple Search Algorithms:** Compare BFS, DFS, Uniform Cost Search, Greedy Best-First Search, and A*.
@@ -25,7 +25,7 @@ The system uses different search algorithms to find routes between locations. It
 - **Route Comparison:** Compare search performance using path costs and expanded nodes.
 - **Interactive Web Interface:** Access the campus navigation interface through a browser.
 
-## 🧠 Algorithms Used
+## Algorithms Used
 
 ### 1. Single-Destination Search
 
@@ -47,7 +47,7 @@ The multi-stop problem is treated as a Constraint Satisfaction Problem (CSP).
 
 *Note: Hill Climbing is a heuristic method and does not guarantee a globally optimal solution.*
 
-## 📊 Experimental Results
+##  Experimental Results
 
 The project evaluates search algorithms through single-destination, road-closure, and multi-stop experiments.
 
@@ -80,7 +80,7 @@ The following results show how often Hill Climbing matched the exact Backtrackin
 
 These results demonstrate that heuristic performance becomes less reliable as the number of stops increases.
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```text
 smart-campus-navigator-sau/
@@ -102,7 +102,7 @@ smart-campus-navigator-sau/
 └── README.md                     # Project documentation
 ```
 
-## 🚀 How to Access the Project
+## How to Access the Project
 
 ### Online Demo
 
@@ -119,7 +119,7 @@ https://pratibha289673.github.io/smart-campus-navigator-sau/
 
 The Python source files and graph data are also included for studying the implementation and experiments.
 
-## ⚙️ Technologies Used
+##  Technologies Used
 
 - **Python** – Search algorithms, graph processing, CSP and experiments.
 - **HTML, CSS and JavaScript** – Interactive web interface.
@@ -127,7 +127,7 @@ The Python source files and graph data are also included for studying the implem
 - **JSON** – Graph data and experimental results.
 - **GitHub Pages** – Hosting the web application.
 
-## ⚠️ Limitations
+##  Limitations
 
 - Indoor connections are estimated rather than measured outdoor paths.
 - The system uses a predefined campus graph rather than live GPS tracking.
@@ -135,7 +135,7 @@ The Python source files and graph data are also included for studying the implem
 - The quality of route recommendations depends on the accuracy and completeness of the campus graph.
 - Python and standalone HTML maintain separate graph representations derived from the same KML map.
 
-## 🎯 Project Objective
+##  Project Objective
 
 The main objective of Smart Campus Navigator is to demonstrate how Artificial Intelligence search algorithms, graph theory, and Constraint Satisfaction Problems can be applied to a practical campus navigation problem.
 
